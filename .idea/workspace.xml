@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6fa5ab0-cca6-49c7-ad35-095480044f28" name="Changes" comment="add country">
+    <list default="true" id="b6fa5ab0-cca6-49c7-ad35-095480044f28" name="Changes" comment="add select + text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/init.py" afterDir="false" />
     </list>
@@ -97,13 +97,22 @@
       <option name="project" value="LOCAL" />
       <updated>1742237729821</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add select + text">
+      <option name="closed" value="true" />
+      <created>1742410233638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742410233638</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="add map_image, update init.py" />
     <MESSAGE value="add country" />
-    <option name="LAST_COMMIT_MESSAGE" value="add country" />
+    <MESSAGE value="add select + text" />
+    <option name="LAST_COMMIT_MESSAGE" value="add select + text" />
   </component>
 </project>

@@ -1,5 +1,3 @@
-from itertools import count
-
 import pygame as pg
 import sys
 import math
@@ -18,22 +16,35 @@ red = (255,0,0)
 blue = (0,0,255)
 green = (0,255,0)
 
+player = [
+    {"name": "Stalin",
+     "color": (180, 0, 0),
+     "arms to place": 2},
+    {"name": "Trump",
+     "color": (180, 0, 0),
+     "arms to place": 2},
+]
+
 country = [
     {"x":530,
      "y": 230,
      "name": "USSR",
-     "arms": 99999,
+     "arms": 0,
      "slawes": 159,
      "people": 30987669,
-     "people+": 480000},
+     "people+": 480000,
+     "owner": None},
     {"x": 158,
      "y": 242,
      "name": "USA",
-     "arms": 99999,
+     "arms": 0,
      "slawes": 159,
      "people": 30987669,
-     "people+": 480000}
+     "people+": 480000,
+     "owner": None}
 ]
+
+current_player_index = 0
 
 pg.font.init()
 font = pg.font.SysFont(None, 24)
@@ -55,6 +66,18 @@ while running:
                 if dist < 10:
                     selected_territory = country1
                     print(f"Вы выбрали текущую территорию, {country1["name"]}")
+                    current_player = player[current_player_index]
+                    if current_player["arms to place"] > 0:
+                        if (country["owner"] is None) or (country["owner"] == current_player_index):
+                            if country["owner"] is None:
+                                country["owner"] = current_player_index
+                            country["arms"] += 1
+                            current_player["arms to place"] -= 1
+                            print(f"{current_player["name"]} разместил армию на {country["name"]}. Осталось армий: {current_player["arms to place"]}")
+                            if current_player["arms to place"]:
+                                current_player_index = (current_player_index+1) % len(player)
+                                print(f'Теперь ход у {player[current_player_index["name"]]}')
+
 
     for country1 in country:
         arms = country1['arms']
