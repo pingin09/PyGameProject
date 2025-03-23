@@ -68,15 +68,15 @@ while running:
                     print(f"Вы выбрали текущую территорию, {country1["name"]}")
                     current_player = player[current_player_index]
                     if current_player["arms to place"] > 0:
-                        if (country["owner"] is None) or (country["owner"] == current_player_index):
-                            if country["owner"] is None:
-                                country["owner"] = current_player_index
-                            country["arms"] += 1
+                        if (country1["owner"] is None) or (country1["owner"] == current_player_index):
+                            if country1["owner"] is None:
+                                country1["owner"] = current_player_index
+                            country1["arms"] += 1
                             current_player["arms to place"] -= 1
-                            print(f"{current_player["name"]} разместил армию на {country["name"]}. Осталось армий: {current_player["arms to place"]}")
+                            print(f"{current_player["name"]} разместил армию на {country1["name"]}. Осталось армий: {current_player["arms to place"]}")
                             if current_player["arms to place"]:
                                 current_player_index = (current_player_index+1) % len(player)
-                                print(f'Теперь ход у {player[current_player_index["name"]]}')
+                                print(f'Теперь ход у {player[current_player_index]["name"]}')
 
 
     for country1 in country:
